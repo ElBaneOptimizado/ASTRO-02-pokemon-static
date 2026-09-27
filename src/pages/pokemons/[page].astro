@@ -3,6 +3,7 @@ import type { GetStaticPaths } from 'astro';
 import PokemonCard from '../../components/pokemons/PokemonCard.astro';
 import type { PokemonListResponse } from '../../interfaces/pokemon-list.response';
 import MainLayout from '../../layouts/MainLayout.astro';
+import '../../styles/global.css';
 
 export const getStaticPaths = (async ({ paginate }) => {
   const resp = await fetch('https://pokeapi.co/api/v2/pokemon?limit=151');
