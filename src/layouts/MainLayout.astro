@@ -26,7 +26,7 @@ const { title = siteInfo.title, description = siteInfo.description, image, } = A
     <meta property="og:image" content={image} />
     <meta property="og:description" content={description} />
     <title>{title}</title>
-
+<!-- Se usa <ClientRouter /> (antes ViewTransitions) para convertir la web en una SPA. Evita que la página parpadee al navegar y permite que los componentes no se reinicien. -->
     <ClientRouter />
   </head>
   <body class="bg-slate-900 text-slate-100 min-h-screen">
