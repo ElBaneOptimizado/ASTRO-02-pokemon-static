@@ -2,7 +2,7 @@
 import MainLayout from '../layouts/MainLayout.astro';
 import PokemonCard from '../components/pokemons/PokemonCard.astro';
 import type { PokemonListResponse } from '../interfaces/pokemon-list.response.ts';
-
+import Title from '../components/pokemons/shared/Title.astro';
 const resp = await fetch('https://pokeapi.co/api/v2/pokemon?limit=151');
 const data = (await resp.json()) as PokemonListResponse;
 console.log(data);
@@ -17,10 +17,7 @@ import '../styles/global.css';
 ---
 
 <MainLayout title={title}>
-	<h1 class= "text-3xl">Listado de Pokémons</h1>
-	<hr />
-	<ul>
-
+	<Title>Listado</Title>
 	<section
 		arial-label="Listado de Pokémons"
 		class="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 gap-4 mt-5"
@@ -30,5 +27,5 @@ import '../styles/global.css';
 	</section>
 	
 	
-	</ul>
+	
 </MainLayout>
