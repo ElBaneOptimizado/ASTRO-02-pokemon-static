@@ -37,7 +37,7 @@ image={imageSrc}>
                 <Title>{name}</Title>
                 
             </div>
-          <button id="btn-favorite"class="ml-4 hover:animate-pulse">
+          <button id="btn-favorite"class="ml-4 hover:animate-pulse"data-name={name} data-id={id}>
               <Icon name="heart-outline" size={50}/>
               <Icon class="hidden"name="heart-full" size={50}/>
         </button>
@@ -51,12 +51,41 @@ image={imageSrc}>
         </audio>
     </section>
 </MainLayout>
+
+
+<script>
+interface FavoritePokemon {
+    name: string;
+    id: number;
+}
+
+document.addEventListener('astro:page-load', () => {
+
+  const btnFavorite = document.querySelector('#btn-favorite') as HTMLButtonElement;
+
+ 
+  if (!btnFavorite) return;
+
+  const name = btnFavorite.dataset.name;
+  const id = btnFavorite.dataset.id;
+
+  btnFavorite.addEventListener('click', () => {
+    console.log({ name, id });
+  });
+
+});
+
+</script>
+
+</script>
+
+
+
+
     <style>
          @reference "../../styles/global.css";
         a{
             @apply hover:underline text-blue-500;
         }
-        
-            
         
    </style>
