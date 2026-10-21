@@ -1,0 +1,17 @@
+---
+import { Counter } from '../../components/Counter.tsx';
+import MainLayout from '../../layouts/MainLayout.astro';
+import Title from '../../components/pokemons/shared/Title.astro';
+---
+
+<MainLayout title="Favorites">
+ <Title>Islas</Title>
+
+<div style={{
+    height:'2000px',
+    backgroundColor:'red',
+    opacity: 0.4,
+}}
+></div>
+ <Counter client:visible />
+</MainLayout>
