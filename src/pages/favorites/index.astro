@@ -1,8 +1,13 @@
 ---
+import { Counter } from '../../components/Counter.tsx';
 import MainLayout from '../../layouts/MainLayout.astro';
 import Title from '../../components/pokemons/shared/Title.astro';
 ---
 
 <MainLayout title="Favorites">
  <Title>Favoritos</Title>
+
+
+
+ <Counter client:load />
 </MainLayout>
