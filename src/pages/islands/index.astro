@@ -24,13 +24,14 @@ const counterValue = 20;
     opacity: 0.4,
 }}
 ></div>
- <Counter 
-    transition:persist="counter"
-    transition:persists-props
- client:visible
-  initialValue={counterValue} 
-  >
-    <Title>Counter Island</Title>
+<Counter
+  transition:persist="counter"
+  transition:persist-props
+  client:visible
+  initValue={counterValue}
+>
+  <Title>Counter Island</Title>
 </Counter>
+
   
 </MainLayout>
